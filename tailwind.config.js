@@ -1,4 +1,6 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
+const {
+  fontFamily
+} = require("tailwindcss/defaultTheme")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,6 +21,18 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        indigo: {
+          DEFAULT:"#006dae",
+          100: "#cce2ef",
+          200: "#99c5df",
+          300: "#66a7ce",
+          400: "#338abe",
+          500: "#006dae",
+          600: "#00578b",
+          700: "#004168",
+          800: "#002c46",
+          900: "#001623"
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -58,12 +72,20 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: 0
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)"
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          from: {
+            height: "var(--radix-accordion-content-height)"
+          },
+          to: {
+            height: 0
+          },
         },
       },
       animation: {

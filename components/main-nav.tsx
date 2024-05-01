@@ -14,7 +14,7 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
+        <Icons.logo className="h-8 w-8 text-indigo" />
         <span className="inline-block font-bold">{siteConfig.name}</span>
       </Link>
       {items?.length ? (
@@ -26,11 +26,11 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
+                    "flex items-center  p-2 text-sm font-medium rounded-md text-muted-foreground transition-colors border-transparent hover:bg-secondary/80 bg-transparent",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >
-                  {item.title}
+                  {item.label}
                 </Link>
               )
           )}

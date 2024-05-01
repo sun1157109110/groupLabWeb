@@ -44,6 +44,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <div className="flex-1">{children}</div>
+              <footer className="w-full flex items-center justify-center py-3">
+                <span className="text-default-600">Powered by</span>
+                <p className="text-primary">NextUI</p>
+              </footer>
             </div>
             <TailwindIndicator />
           </ThemeProvider>

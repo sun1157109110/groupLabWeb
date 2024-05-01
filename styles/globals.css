@@ -79,3 +79,25 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+/* loading page */
+.loader {
+  display: inline-block;
+  position: relative;
+  border: 2px solid;
+  @apply h-24 w-24 rounded-full border-foreground/70;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+
+  &::after {
+    content: " ";
+    @apply absolute left-2.5 top-2.5 h-8 w-8 rounded-full bg-foreground;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

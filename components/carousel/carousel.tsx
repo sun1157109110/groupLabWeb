@@ -19,7 +19,7 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 import Image from 'next/image'
-import ClassNames from "embla-carousel-class-names";
+// import ClassNames from "embla-carousel-class-names";
 import "./index.css";
 
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -27,7 +27,7 @@ type CarouselOptions = UseCarouselParameters[0];
 type CarouselApi = UseEmblaCarouselType[1];
 type EmblaEventType = Parameters<Exclude<CarouselApi, undefined>["on"]>[0];
 type PropType = {
-  slides: number[];
+  slides: any[];
   options?: CarouselOptions;
 };
 const TWEEN_FACTOR_BASE = 0.2;
@@ -132,17 +132,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
+          {slides.map((value) => (
+            <div className="embla__slide" key={value}>
               <div className="embla__parallax">
                 <div className="embla__parallax__layer">
                   <Image
                     // className="embla__slide__img"
                     className="embla__slide__img embla__parallax__img"
-                    src={`https://picsum.photos/600/350?v=${index}`}
+                    src={value}
                     alt="Your alt text"
-                    width={734}
-                    height={304}
+                    width={1280}
+                    height={480}
+                    priority={true}
+                    quality={100}
                   />
                 </div>
               </div>
