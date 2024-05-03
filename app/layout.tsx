@@ -43,7 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
-              <div className="flex-1">{children}</div>
+              <main className="flex-1">{children}</main>
               <footer className="w-full flex items-center justify-center py-3">
                 <span className="text-default-600">Powered by</span>
                 <p className="text-primary">NextUI</p>
