@@ -24,7 +24,7 @@ export default function Members() {
                     <Link href={""}>
                       <Avatar className="w-48 h-48 outline-none bg-muted-foreground/50 hover:ring-indigo-500 hover:ring-offset-[6px] transition-all ring-2 ring-offset-[5px] ring-offset-background dark:ring-offset-background-dark ring-muted-foreground/50">
                         <AvatarImage src={memObj.avatar} alt="@shadcn" />
-                        <AvatarFallback delayMs={200}>
+                        <AvatarFallback delayMs={500}>
                           <User className="w-full h-full text-muted-foreground " />
                         </AvatarFallback>
                       </Avatar>

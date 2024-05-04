@@ -8,7 +8,7 @@ export default function BlogPage() {
       <Tabs defaultValue="0" className="mt-4" orientation="vertical">
         <TabsList>
           {siteConfig.researchList.map((item, index) => (
-            <TabsTrigger className="text-xl" value={index + ""}>{`研究方向${
+            <TabsTrigger className="text-sm text-muted-foreground font-normal" value={index + ""}>{`研究方向${
               index + 1
             }`}</TabsTrigger>
           ))}
